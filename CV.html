@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Generate CV as PDF</title>
+</head>
+<body>
+  <!-- <div class="container">
+      <button id="Button"><b>Click here to Download the resume</b></button>
+      <div class="card" id="PDF">-->
+<form>
+<pre>Name:</pre><input type="text"value="R.P.S.T.Dankelewaththa" size="60"><br>
+<pre>Adress:</pre><input type="text"value="Inguruwaththa,Pahaladiyadora,Sri Lanka" size="60"><br>
+<pre>Date of birth:</pre><input type="text"value="2000.04.29" size="60"><br>
+<pre>Email:</pre><input type="text"value="sahandankelewaththa@gmail.com" size="60"><br>
+<pre>instragram id:</pre><input type="text"value="dankelewaththasaha" size="60"><br>
+<pre>Gender:</pre><input type="text"value="Male" size="60"><br>
+<pre>Nic:</pre><input type="text"value="200012000750" size="60"><br>
+<br>
+<h3>Education</h3>
+<ul>
+<li>Passed GCE O/L in 2016</li>
+<ul>
+<li>Mathematics -<b>A</b></li>
+<li>English-<b>C</b></li>
+<li>Sinhala Language-<b>A</b></li>
+<li>Science-<b>B</b></li>
+<li>Tamil-<b>B</b></li>
+<li>Health-<b>A</b></li>
+<li>Music-<b>A</b></li>
+<li>Buddhisam-<b>A</b></li>
+<li>History-<b>A</b></li>
+</ul>
+<li>Passed GCE A/L in 2022.</li>
+<ul>
+<li>Combined mathematics-<b>C</b></li>
+<li>Chemistry-<b>C</b></li>
+<li>Physics-<b>C</b></li>
+</ul>
+</ul>
+<br>
+<h3>Skills</h3>
+<ul>
+<li>Java</li>
+<li>C++</li>
+<li>C</li>
+<li>JavaScript</li>
+<li>MySQl</li>
+<li>Html,CSS,/li>
+<li>PHP</li>
+</ul>
+</form>
+      </div>
+   </div>
+   <script>
+      var button = document.getElementById("Button");
+      var makepdf = document.getElementById("PDF");
+      button.addEventListener("click", function () {
+         var mywindow = window.open("", "PRINT", "height=600,width=600");
+         mywindow.document.write(makepdf.innerHTML);
+ var today = new Date();
+  var day = today.getDay();
+  var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  var dateTime = date+' '+time;
+     mywindow.document.write( " Day  :- "+ date+"<br>Time :-"+time  )
+if(today.getHours()<11)
+{
+ mywindow.document.write("Am")
+}
+else
+{
+ mywindow.document.write("Pm")
+}
+         mywindow.document.close();
+         mywindow.focus();
+         mywindow.print();
+         return true;
+      });
+   </script>
+
+</body>
+</html>
